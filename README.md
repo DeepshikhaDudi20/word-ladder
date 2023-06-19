@@ -29,12 +29,19 @@ The Word Ladder App includes the following key features:
 
 ## Input words
 - Input is taken from prepopulated array and algorithm is created to find neighbouring words.
-- Following words that works:
+- Following words that works: Pick any 2 words from list, it will show the words that appear in between.
  - "DOG" -> "DIG" -> "BIG" -> "BIN" -> "BUN"
  - "GLASS" -> "CLASS" -> "CLANS" -> "CLANK" -> "BLANK" -> "BLINK" -> "BRINK"
- - "CHARGE" -> "CHANGE" -> "CHANGS"-> "CHANTS" -> "CHINTS"-> "CHINES"-> "CHINED" -> "COINED" -> "COINER" -> "CHARGE"
+ - "CHARGE" -> "CHANGE" -> "CHANGS"-> "CHANTS" -> "CHINTS"-> "CHINES"-> "CHINED" -> "COINED" -> "COINER"
 
- - If input words entered are CHARGE and CHARGE, word ladder is more than 8 words, in such case scroller will be visible in word card list.
+ - If input words entered are CHARGE and COINER, word ladder is more than 8 words, in such case scroller will be visible in word card list and it will display all the words.
+
+ For example:
+ - Input:
+    FirstWord: CHARGE
+    SecondWord: CHANTS
+- Output:
+  - WordLadder: "CHARGE" -> "CHANGE" -> "CHANGS"-> "CHANTS"
 
 ## Additional implementations
 

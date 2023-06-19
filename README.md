@@ -1,70 +1,76 @@
-# Getting Started with Create React App
+# Word Ladder
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# About project - Word Ladder
 
-## Available Scripts
+The purpose of this project is to develop a word ladder application which takes two words of equal length and calculates a "word ladder" that joins them. It is done using words taken from prepopulated array.
 
-In the project directory, you can run:
+## Tech Stack
 
-### `npm start`
+- ReactJS: ReactJS is chosen for its better performance due to virtual DOM, efficient UI updates
+- SCSS (Sass): SCSS is used for styling to ensure clean and maintainable CSS. It reduces repetition, increases reusability, and helps maintain modular and organized stylesheets.
+- ESLint: ESLint is used to catch linting errors, enforce consistent code style, and ensure code quality by following best practices.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Key Features implemented
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The Word Ladder App includes the following key features:
 
-### `npm test`
+- Two takes two words of equal length and calculates a word ladder that joins them. 
+- The input boxes allow input of alphabetical characters only. 
+- The solve button is only active when the following are true
+  -There are words in both the input boxes
+   - Both words are the same length 
+   - Both words are different
+   - The button hasn't already been pressed already with the current word choice
+- If word ladder calculation takes longer than 0.5 seconds, a spinner is shown.
+- On success, the word ladder appears between the two input boxes  
+- On failure, a modal dialog appears with an error message and a close button that closes the dialog box
+- If a word ladder is displayed and either input box is edited, the word ladder clears out.
+- If word ladder is longer than 8 words, it should be scrollable  
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Input words
+- Input is taken from prepopulated array and algorithm is created to find neighbouring words.
+- Following words that works:
+ - "DOG" -> "DIG" -> "BIG" -> "BIN" -> "BUN"
+ - "GLASS" -> "CLASS" -> "CLANS" -> "CLANK" -> "BLANK" -> "BLINK" -> "BRINK"
+ - "CHARGE" -> "CHANGE" -> "CHANGS"-> "CHANTS" -> "CHINTS"-> "CHINES"-> "CHINED" -> "COINED" -> "COINER" -> "CONNER"
 
-### `npm run build`
+## Additional implementations
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Used responsive units like percentages or rem instead of fixed pixel values for sizing elements to ensures styles adapt to different screen sizes
+- Utilized media queries to apply specific styles based on different screen sizes
+- Use meaningful class names in BEM format, to make code more readable and maintainable
+- Exception/Error handling
+- Accessibility
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Project Styling
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Used sass library, followed modular approach (To have robust structure & easy maintenance)
+- Stored all colors used across application in a common file named as colors.scss for consistent styles across app.
 
-### `npm run eject`
+## Accessibility as per WCAG 2.1 - AA standards
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Checklist {https://www.w3.org/WAI/WCAG21/quickref/} : to confirm the project is meeting WCAG 2.1 - AA standards
+- Made it screen readers compliant by providing appropriate roles and aria-\* attributes to elements
+- Pressing the TAB or SHIFT + TAB keys to allow the user to navigate and interact with interactive elements on the page. (TAB moves to the next element, SHIFT + TAB moves to the previous element)
+- Used axe devTools to check styling and other Accessibility standards
+- Used Lighthouse to check Accessibility and performance
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Scope of Improvement
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+While the Word Ladder App is fully functional, there are several areas where further improvements can be made:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Typescript Implementation
+- Unit test cases using React testing Library and Jest
+- Better word ladder alogorithm calculation  (May be from some API or any other algo)
+- Separate Error and Loader component with better visuals. (Enhanced error handling mechanism.)
+- End to end testing with Cypress
+- Import i18next library and store language in a text file to make it in multiple languages
 
-## Learn More
+## Execution
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- To install dependencies:
+    - npm install
+- To build app:
+    - npm run build
+- To spin up the app:
+    - npm start

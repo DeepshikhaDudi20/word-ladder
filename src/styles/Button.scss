@@ -1,0 +1,29 @@
+@import "colors.scss";
+
+.button {
+  padding: 0.5rem;
+  font-size: 1rem;
+  background-color: $indigo;
+  color: $white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+
+  &:hover:not(.button--disabled) {
+    background-color: $darkerIndigo;
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    transform: translateY(0);
+    box-shadow: none;
+  }
+
+  &--disabled {
+    background-color: $lightGrey;
+    cursor: not-allowed;
+    box-shadow: none;
+  }
+}

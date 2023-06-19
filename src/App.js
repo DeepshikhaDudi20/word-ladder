@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./styles/App.scss";
+import WordLadderCard from "./components/WordLadder/WordLadderCard";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className="app">
+      <header className="app__header">
+        <h1>Word Ladder</h1>
       </header>
+      <main className="app-content">
+      <WordLadderCard />
+      </main>
+      <footer className="footer">
+        UI task
+      </footer>
     </div>
   );
-}
+};
 
 export default App;

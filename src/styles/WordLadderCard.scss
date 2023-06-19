@@ -1,0 +1,33 @@
+@import "colors.scss";
+
+.word-ladder-card {
+  border: 1px solid $lightGrey;
+  border-radius: 4px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 1rem;
+  background-color: $darkcyan;
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__word-ladder-list {
+    margin: 0.5rem 0;
+    max-height: 250px;
+    width: 65%;
+    overflow-y: auto;
+    padding: 0.5rem;
+    background-color: $lightGrey;
+    border-radius: 4px;
+  }
+
+  &__spinner {
+    margin: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

@@ -32,7 +32,9 @@ The Word Ladder App includes the following key features:
 - Following words that works:
  - "DOG" -> "DIG" -> "BIG" -> "BIN" -> "BUN"
  - "GLASS" -> "CLASS" -> "CLANS" -> "CLANK" -> "BLANK" -> "BLINK" -> "BRINK"
- - "CHARGE" -> "CHANGE" -> "CHANGS"-> "CHANTS" -> "CHINTS"-> "CHINES"-> "CHINED" -> "COINED" -> "COINER" -> "CONNER"
+ - "CHARGE" -> "CHANGE" -> "CHANGS"-> "CHANTS" -> "CHINTS"-> "CHINES"-> "CHINED" -> "COINED" -> "COINER" -> "CHARGE"
+
+ - If input words entered are CHARGE and CHARGE, word ladder is more than 8 words, in such case scroller will be visible in word card list.
 
 ## Additional implementations
 
@@ -74,3 +76,8 @@ While the Word Ladder App is fully functional, there are several areas where fur
     - npm run build
 - To spin up the app:
     - npm start
+
+## App View
+![Screenshot](https://github.com/DeepshikhaDudi20/word-ladder/blob/master/AppScreenshots/WordLadderLandingPage.png)
+![Screenshot](https://github.com/DeepshikhaDudi20/word-ladder/blob/master/AppScreenshots/WordLadderWithOutput.png)
+![Screenshot](https://github.com/DeepshikhaDudi20/word-ladder/blob/master/AppScreenshots/WordLadderMobileView.png)

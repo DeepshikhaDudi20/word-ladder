@@ -1,5 +1,5 @@
 export const generateWordLadder = (startWord, endWord) => {
-  const wordList = ["DOG", "DIG", "BIG", "BIN", "BUN", "GLASS", "CLASS", "CLANS", "CLANK", "BLANK", "BLINK", "BRINK", "CHARGE" , "CHANGE" , "CHANGS", "CHANTS" , "CHINTS", "CHINES", "CHINED" , "COINED", "COINER", "CONNER"];
+  const wordList = ["DOG", "DIG", "BIG", "BIN", "BUN", "GLASS", "CLASS", "CLANS", "CLANK", "BLANK", "BLINK", "BRINK", "BRICK", "CHARGE" , "CHANGE" , "CHANGS", "CHANTS" , "CHINTS", "CHINES", "CHINED" , "COINED", "COINER", "CONNER"];
 
   const visited = new Set();
   const queue = [[startWord, [startWord]]];
